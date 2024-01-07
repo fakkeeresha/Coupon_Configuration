@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Coupon Configuration</title>
+    <script src="jquery-3.6.4.min.js"></script>
+  </head>
+  <script>
+    function validate(input){
+  if(/^\s/.test(input.value))
+    input.value = '';
+}
+
+textarea.onkeyup = function () {
+  textarea.style.height = textarea.clientHeight + 'px';
+}
+  </script>
+  <body>
+    <h1 class="title">Coupon Configuration</h1>
+    <div class="first">
+      <form action="" class="form">
+        <h2>RECHARGE_COUPON_DTLS</h2>
+        <div class="inputs">
+          <div class="flexrow">
+            <div class="id">
+              <label for="Id">ID :</label>
+              <input id="id" type="number" value=" " />
+            </div>
+
+            <div class="COUPON_ID">
+              <label for="COUPON_ID">COUPON_ID :</label>
+              <input id="COUPON_ID" oninput="validate(this)" type="text" value=" " />
+              <!-- <small>Alphanumeric Value</small> -->
+            </div>
+            <div class="COUPON_AMOUNT">
+              <label for="COUPON_AMOUNT">COUPON_AMOUNT :</label>
+              <input id="COUPON_AMOUNT" oninput="validate(this)" type="number" value=" " />
+            </div>
+          </div>
+          <div class="flexrow">
+          <div class="COUPON_END_DATE">
+            <label for="COUPON_END_DATE">COUPON_END_DATE :</label>
+            <input id="COUPON_END_DATE" type="date" value=" " />
+          </div>
+          <div class="PRIORITY">
+            <label for="PRIORITY">PRIORITY :</label>
+            <input id="priority" type="number" value=" " />
+            <small>Enter the number greater then 70</small>
+          </div>
+          <div class="DESCRIPTION">
+            <label for="PRIORITY">DESCRIPTION :</label>
+            <input id="description" oninput="validate(this)" type="text" value=" " />
+          </div>
+          </div>
+          <div class="flexrow">
+          <div class="COUPON_NAME">
+            <label for="COUPON_NAME">COUPON_NAME :</label>
+            <input id="COUPON_NAME" oninput="validate(this)" type="text" value=" " />
+          </div>
+          <div class="COUPON_IMG">
+            <label for="COUPON_IMG">COUPON_IMG :</label>
+            <input id="COUPON_IMG" oninput="validate(this)" type="text" value=" " />
+          </div>
+          <div class="COUPON_LINK">
+            <label for="COUPON_LINK">COUPON_LINK :</label>
+            <input id="COUPON_LINK" oninput="validate(this)" type="text" value=" " />
+          </div>
+          </div>
+          <div class="flexrow">
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01"
+              >CATEGORY_ID :</label
+            >
+            <select class="form-select" id="CATEGORY_ID">
+              <option selected>CATEGORY_ID</option>
+              <option value="1">0</option>
+              <option value="2">1</option>
+              <option value="3">2</option>
+            </select>
+            <small>0 for ($), 1 for "%", 2 for combo</small>
+          </div>
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01"
+              >COUPON_TYPE :</label
+            >
+            <select class="form-select" id="COUPON_TYPE">
+              <option selected>COUPON_TYPE :</option>
+              <option value="1">0</option>
+              <option value="2">1</option>
+              
+            </select>
+            <small>1 for general, 0 for unique</small>
+          </div>
+         
+          
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01"
+              >COUPON_CATEGORY :</label
+            >
+            <select class="form-select" id="COUPON_CATEGORY">
+              <option selected>COUPON_CATEGORY :</option>
+              <option value="1">Travel</option>
+              <option value="2">Online Shopping</option>
+              <option value="3">Dining</option>
+              <option value="4">Lifestyle</option>
+              <option value="5">Apparel</option>
+              <option value="6">Gifting</option>
+            </select>
+          </div>
+        </div>
+        <!-- <div class="flexrow">
+          <div class="COUPON_PRIORITY">
+            <label for="PRIORITY">COUPON_PRIORITY :</label>
+            <input id="COUPON_PRIORITY" oninput="validate(this)" type="number" value=" " disabled/>
+          </div>
+          </div> -->
+        </div>
+      </form>
+      <button class="btn" id="btn">Get Scripts</button>
+      <div class="script">
+        <h4>Execute the RECHARGE_COUPON_DTLS Scipts in DB</h4>
+        <label for="script">Scripts</label>
+        <input id="script" type="text" />
+        <button id="copy1" class="copy">Copy</button>
+      </div>
+    </div>
+    <div class="second">
+      <form action="">
+        <h2>RECHARGE_COUPON_AVAILABLE</h2>
+        <div class="COUPON_CODE">
+          <label for="COUPON_NAME">COUPON_CODE :</label>
+          <input id="COUPON_CODE" oninput="validate(this)" type="text" value=" " />
+        </div>
+      </form>
+      <button class="btn" id="btn3">Get Scripts</button>
+      <div class="script1">
+        <h4>Execute the RECHARGE_COUPON_AVAILABLE Scipts in DB</h4>
+        <label for="script1">Scripts</label>
+        <input id="script1" type="text" />
+        <button id="copy2" class="copy">Copy</button>
+      </div>
+      
+    </div>
+    <div class="third">
+      <form action="">
+        <h2>RECHARGE_COUPON_TC</h2>
+        <h4>Paste the Terms & Conditions Here</h4>
+        <div class="input">
+          
+          <textarea name="tc" id="tc" cols="30" rows="10"></textarea>
+        </div>
+      </form>
+      <button class="btn" id="btn2">Get Scripts</button>
+      <div class="script">
+        <h4>Execute the RECHARGE_COUPON_TC Scipts in DB</h4>
+        <label for="script">Scripts</label>
+        <input id="script2" type="text" />
+        <button id="copy3" class="copy">Copy</button>
+      </div>
+    </div>
+    <!-- <div class="scripts">
+      <button class="btn" id="Lbtn">Over All Coupon Scripts</button>
+      <textarea name="scripts" id="ans" cols="30" rows="10"></textarea>
+    </div> -->
+    <div class="info">
+      <h2>Check Yours Configured Coupon</h2>
+      <h3>UAT LINK <a href="https://uat.tataplayrecharge.com/ViewCoupons/coupons" target="_blank">https://uat.tataplayrecharge.com/ViewCoupons/coupons</a></h3>
+      <h3>PROD LINK <a href="https://www.tataplayrecharge.com/ViewCoupons/coupons" target="_blank">https://www.tataplayrecharge.com/ViewCoupons/coupons</a></h3>
+      
+    </div>
+    <script src="script.js"></script>
+  
+  </body>
+</html>

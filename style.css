@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+    
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    background-color: azure;
+    
+  
+}
+.title{
+    background-color: rgb(223, 180, 241);
+    color: rgb(231, 53, 98);
+    font-weight: bold;
+    border-radius: 10px;
+    width: 95vw;
+    margin-top: 0;
+    font-weight: bolder;
+    padding: 10px;
+    text-align: center;
+}
+.first{
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    margin: 10px;
+}
+.first div{
+    margin: 10px;
+    padding: 5px;
+    position: relative;
+}
+.first div label{
+    font-weight: bold;
+}
+.first div input{
+    padding: 5px;
+    margin-left: 20px;
+    padding-left: 2px;
+}
+.first div select{
+    padding: 5px;
+    margin-left: 20px;
+}
+.flexrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.btn{
+    display: block;
+    align-items: center;
+    padding: 10px;
+    font-weight: bolder;
+    background-color: aqua;
+    color: black;
+    width: 300px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: larger;
+    margin-left: 50px;
+}
+.script{
+    font-size: large;
+
+}
+.script input{
+    width: 80vw;
+    height: 50px;
+    background-color: rgb(244, 234, 239);
+   
+}
+.third{
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    margin: 10px;
+}
+.third div{
+    margin: 10px;
+    padding: 5px;
+}
+.third textarea{
+    width: 80vw;
+    margin: auto auto;
+    display: flex;
+    padding: 10px;
+}
+.second{
+        display: flex;
+        flex-direction: column;
+        width: 95vw;
+        margin: 10px;
+
+}
+.second{
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    margin: 10px;
+}
+.second div{
+    margin: 10px;
+    padding: 5px;
+}
+.script1 input{
+    width: 80vw;
+    height: 50px;
+    background-color: rgb(244, 234, 239);
+   
+}
+.second div label{
+    font-weight: bold;
+}
+.second div input{
+    padding: 5px;
+    margin-left: 20px;
+}
+
+.copy{
+    padding: 10px;
+    font-weight: bolder;
+    background-color: cyan;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.first div small{
+   position: absolute;
+  top: -30px;
+  left: 90px;
+  align-items: center;
+  margin: 10px;
+   color: darkred;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 5px;
+    text-align: left;
+    padding-left: 10px;
+    width: 90vw;
+}
+.scripts textarea{
+    background-color: rgb(254, 251, 237);
+    margin: auto;
+    width: 75vw;
+    margin-top: 40px;
+   
+    padding: 5px;
+    font-size: x-large;
+
+
+}
